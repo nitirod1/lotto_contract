@@ -2,13 +2,17 @@ import { ethers } from "hardhat";
 
 async function main() {
 
-  const Lotto = await ethers.getContractFactory("Lotto.sol");
-  const lock = await Lotto.deploy();
+  const LottoFactory = await ethers.getContractFactory("LottoFactory");
+  const LottoFactoryDeployed = await LottoFactory.deploy();
+  await LottoFactoryDeployed.deployed();
+  const LottoToken = await ethers.getContractFactory("LottoToken");
+  const LottoTokenDeployed = await LottoToken.deploy(LottoFactoryDeployed.address);
+  await LottoTokenDeployed.deployed();
 
-  await lock.deployed();
-
-  console.log(
-    `Lock with deployed to ${lock.address}`
+  console.log(`
+  LottoFactory with deployed to ${LottoFactoryDeployed.address}
+  LottoTokenDeployed with deployed to ${LottoTokenDeployed.address}
+  `
   );
 }
 
