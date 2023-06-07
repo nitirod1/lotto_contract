@@ -10,7 +10,6 @@ contract LottoToken is ERC721, ERC721URIStorage, AccessControl {
     using Counters for Counters.Counter;
 
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
-    bytes32 public constant CONTROLLER_ROLE = keccak256("Controller");
     Counters.Counter private _tokenIdCounter;
 
     constructor(address _lottoFactory) ERC721("LottoToken", "LTK") {
