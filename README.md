@@ -1,6 +1,7 @@
-# Sample Hardhat Project Lotto
+# Project Lottery 
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+แพลตฟอร์มลอตเตอรี่เป็น Proof of Concept ที่มีแนวคิดมาจากลอตเตอรี่ของประเทศไทย โดยแพลตฟอร์มนี้สามารถซื้อลอตเตอร์รี่ , ทำการแสดงลอตเตอรี่ที่มีอยู่ของผู้ซื้อ รวมถึงแพลตฟอร์มนี้จะมีการประกาศผลลอตเตอรี่ และ การเช็คการถูกรางวัลของลอตเตอรี่ ในแต่ละงวดได้
+
 
 Try running some of the following tasks:
 
